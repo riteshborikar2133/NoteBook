@@ -12,11 +12,15 @@ body{
     background:#020703;
     width: 100%;
     position: fixed;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
     padding: 2px 7px;
     justify-content: space-between;
 }
 .lnav{
     /* background: greenyellow; */
+    display: flex;
+    justify-content: space-between;
 }
 .lnav .logo{
     font-family: 'Babylonica', cursive;
@@ -53,7 +57,7 @@ body{
 .wel{
     text-align: center;
     /* padding: 5rem 0rem; */
-    background: url("welcome.jpg");
+    background: url("/welcome.jpg");
     font-size: 1.2rem;
     height: 40rem;
     background-repeat: no-repeat;
@@ -72,11 +76,13 @@ body{
     /* border: 1px solid red; */
     /* padding-top: 23rem; */
 }
-
+.navbar .fa{
+    display: none;
+}
 .subject{
     max-width: 55rem;
     margin: auto;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 .subject h1{
     text-align: center;
@@ -85,6 +91,7 @@ body{
     text-shadow: 3px 3px 3px gray;
     overflow: hidden;
     background-color:#f7f7f7;
+    margin-top: 2rem;
 }
 hr{
     width: 13rem;
@@ -155,5 +162,60 @@ hr{
         /* margin: 2rem 10rem; */
         max-width: 60rem;
         margin: auto;
+    }
+    .weltxt h1{
+        color: black;
+        font-size: 2.8rem;
+        text-shadow: 5px 3px 6px #313131;
+        padding-top: 17rem;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    *{
+        font-size: 15px;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    .lnav{
+        width: 100%;
+        align-items: center;
+    }
+    .subject{
+        max-width: 22rem;
+    }
+    .rightp img{
+        /* border: 1px solid blue; */
+        height: 10rem;
+        width: 16rem;
+    }
+    .rnav{
+        display:none;
+    }
+    .rnav .navul{
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        width: 30rem;
+        margin-left:auto;
+        margin-bottom: 8px;
+    }
+    .active{
+        display: block;
+    }
+    .navbar .fa{
+        display: block;
+        cursor: pointer;
+        margin-right: 2rem;
+    }
+    .navbar .navul .navlist a{
+        /* border: 1px salmon solid; */
+        font-size: 1.2rem;
+        line-height: 3rem;
+    }
+    .wel{
+        background: url("https://cdn.stocksnap.io/img-thumbs/960w/desktop-journal_KKKKW5KVQB.jpg");
+        box-shadow: 3px 3px 3px gray;
     }
 }

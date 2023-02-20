@@ -15,6 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Playfair+Display+SC:wght@700&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -22,8 +23,9 @@
         <div class="navbar">
             <div class="lnav">
                 <h3 class="logo">NoteBook</h3>
+                <i style="font-size:20px; color: aliceblue;" class="fa" id="btn">&#xf0c9;</i>
             </div>
-            <div class="rnav">
+            <div class="rnav" id="navbr">
                 <ul class="navul">
                     <li class="navlist"><a href="#">Contact Us</a></li>
                     <li class="navlist"><a href="#">About Us</a></li>
@@ -138,5 +140,11 @@
 
     </div>
 </body>
-
+<script>
+    var menu = document.getElementById('btn');
+    var rnav = document.getElementById('navbr');
+    menu.addEventListener("click",()=>{
+        rnav.classList.toggle("active");
+    })
+</script>
 </html>
