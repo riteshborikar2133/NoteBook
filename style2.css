@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Lobster+Two&family=PT+Serif&display=swap');
+:root{
+    /* --head='Gloock', serif;
+    --subhead='Lobster Two', cursive;
+    --text=font-family: 'PT Serif', serif; */
+}
+*{
+    font-size: 18px;
+}
+.head{
+    margin-top: 5rem;
+    font-family: 'Gloock', serif;;
+    text-align: center;
+}
+.head h1{
+    font-size: 2rem;
+    color: rgb(10, 29, 10);
+    text-shadow: 2px 2px 3px green;
+}
+.content{
+    /* border: 1px solid red; */
+    margin: 1rem 3rem;
+}
+.content h3{
+    font-family: 'lobster two';
+    font-size: 1.3rem;
+    color: #e6521c;
+    color: #4d4d4d;
+}
+.content .headspan{
+    font-size: 1.4rem;
+    color: #4d4d4d;
+    color: #359f1d;
+}
+.content p{
+    font-family: 'PT Serif', serif;;
+    line-height: 1.6rem;
+    font-size: 1rem;
+}
+.content p span{
+    font-weight: bold;
+}
+p img{
+    height: 18rem;
+    width: 25rem;
+    display: block;
+    margin: auto;
+    
+}
+.code{
+    font-size: 0.8rem;
+}
+.pt li{
+    margin: 1rem 3rem;
+}
+@media screen and (max-width:400px) {
+    *{
+        font-size: 12px;
+    }
+
+}

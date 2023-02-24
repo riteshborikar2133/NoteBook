@@ -57,7 +57,7 @@ body{
 .wel{
     text-align: center;
     /* padding: 5rem 0rem; */
-    background: url("/welcome.jpg");
+    background: url("welcome.jpg");
     font-size: 1.2rem;
     height: 40rem;
     background-repeat: no-repeat;
@@ -224,9 +224,8 @@ hr{
         display: block;
         flex-direction: column;
         text-align: center;
-        width: 22rem;
+        width: 20rem;
         margin-left:auto;
         margin-bottom: 8px;
     }
 }
-

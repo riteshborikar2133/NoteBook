@@ -1,0 +1,84 @@
+*{
+    font-size: 18px;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+
+}
+.cont{
+    /* padding-top: 5rem; */
+    /* margin-top: 5rem; */
+    text-align: center;
+    padding: 5rem 3rem;  
+    /* border: 1px solid red; */
+    /* background: url("https://i0.wp.com/kevinfream.blog/wp-content/uploads/2013/01/java.jpg"); */
+    background-color: #000000;
+    color: aliceblue;
+    background-size: cover;
+}
+.blr{
+    background-color: rgba(151, 151, 151,0.2);
+    padding: 0.5rem;
+}
+.cont h1{
+    font-size: 2.5rem;
+    color: #EEEEEE;
+    font-family: 'Playfair Display SC', serif;   
+}
+.unit{
+    /* border: 1px solid red; */
+    margin: 2rem 10rem;
+}
+.unit .unsec{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2rem;
+}
+/* .unsec li{
+    
+    font-size: 2.3rem;
+    border: 4px double black;
+    text-align: center;
+    border-radius: 16px;
+    font-family: 'Playfair Display SC', serif;  
+    padding: 0rem 2rem;
+    transition: 0.2s linear;
+    color: #EEEEEE;
+} */
+.unsec li a{
+    font-size: 2.3rem;
+    border: 4px double black;
+    text-align: center;
+    border-radius: 16px;
+    font-family: 'Playfair Display SC', serif;  
+    padding: 0rem 2rem;
+    transition: 0.2s linear;
+    color: #EEEEEE;
+}
+.unsec :hover{
+    background: transparent;
+    background-size: cover;
+    background-color: #EEEEEE;
+    color: black;
+    translate: 20px -1px;
+    box-shadow: 3px 2px 3px gainsboro;
+
+}
+
+@media screen and (max-width:400px) {
+    *{
+        font-size: 13px;
+    }
+    .unit{
+        margin:auto;
+    }
+    .unsec li{
+        margin-top: 2rem;
+    }
+    .cont{
+        background-size: contain;
+    }
+}
