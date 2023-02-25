@@ -1,61 +1,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Lobster+Two&family=PT+Serif&display=swap');
-:root{
+
+:root {
     /* --head='Gloock', serif;
     --subhead='Lobster Two', cursive;
     --text=font-family: 'PT Serif', serif; */
 }
-*{
+
+* {
     font-size: 18px;
 }
-.head{
+
+body {
+    background-color: #f7f7f7;
+}
+
+.head {
     margin-top: 5rem;
-    font-family: 'Gloock', serif;;
+    font-family: 'Gloock', serif;
+    ;
     text-align: center;
 }
-.head h1{
+
+.head h1 {
     font-size: 2rem;
     color: rgb(10, 29, 10);
     text-shadow: 2px 2px 3px green;
 }
-.content{
+
+.content {
     /* border: 1px solid red; */
     margin: 1rem 3rem;
 }
-.content h3{
+
+.content h3 {
     font-family: 'lobster two';
     font-size: 1.3rem;
     color: #e6521c;
     color: #4d4d4d;
 }
-.content .headspan{
+
+.content .headspan {
     font-size: 1.4rem;
     color: #4d4d4d;
     color: #359f1d;
 }
-.content p{
-    font-family: 'PT Serif', serif;;
+
+.content p {
+    font-family: 'PT Serif', serif;
+    ;
     line-height: 1.6rem;
     font-size: 1rem;
 }
-.content p span{
+
+.content p span {
     font-weight: bold;
 }
-p img{
+
+p img {
     height: 18rem;
     width: 25rem;
     display: block;
     margin: auto;
-    
+
 }
-.code{
+
+.code {
     font-size: 0.8rem;
+    background-color: rgb(0, 0, 0, 0.8);
+    padding: 1rem;
+    margin: 0.3rem;
+    color: whitesmoke;
 }
-.pt li{
+
+.pt li {
     margin: 1rem 3rem;
 }
+
+.noteboard {
+    margin: 2rem;
+    background-color: #4d4d4d;
+    padding: 1rem;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.noteboard a {
+    color: white;
+    font-family: 'PT Serif', serif;
+    animation: txcolor 1s linear 0s infinite alternate;
+}
+.noteboard .headspan {
+    font-family: 'lobster two';
+    font-size: 1.4rem;
+    color: white;
+}
+@keyframes txcolor {
+    from {
+        color: rgb(0, 255, 110);
+    }
+
+    to {
+        color: yellow;
+    }
+}
+
 @media screen and (max-width:400px) {
-    *{
+    * {
         font-size: 12px;
+    }
+
+    .code {
+        padding: 1rem 0rem;
+
     }
 
 }
