@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro. to Opps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Babylonica&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="lnav">
+            <h3 class="logo">NoteBook</h3>
+            <i style="font-size:20px; color: aliceblue;" class="fa" id="btn">&#xf0c9;</i>
+        </div>
+        <div class="rnav" id="navbr">
+            <ul class="navul">
+                <li class="navlist"><a href="opp.html">Home</a></li>
+                <li class="navlist"><a href="#">Contact Us</a></li>
+                <li class="navlist"><a href="#">About Us</a></li>
+                <!-- <li class="navlist"><a href="#">System Lab</a></li>
+                <li class="navlist"><a href="#">FDECA</a></li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="head">
+        <h1>Java String</h1>
+    </div>
+    <div class="content">
+        <h3>Topic 1:- <span class="headspan">String Defination</span></h3>
+        <p>
+            Generally, String is a sequence of characters. But in Java, string is an object that represents a sequence
+            of characters. The java.lang.String class is used to create a string object.
+            <br>
+            There are two ways to create String object:
+        <ul class="pt">
+            <li>
+                By string literal
+            </li>
+            <li>
+                By new keyword
+            </li>
+        </ul>
+        <br>
+        <p>
+            <strong>&#9830; String Literal : <br></strong>
+
+            Java String literal is created by using double quotes. For Example:
+            <br>
+            String s="welcome";
+            <br>
+            Each time you create a string literal, the JVM checks the "string constant pool" first. If the string
+            already exists in the pool, a reference to the pooled instance is returned. If the string doesn't exist in
+            the pool, a new string instance is created and placed in the pool. For example:
+            <br>
+            String s1="Welcome"; <br>  
+            String s2="Welcome"; //It doesn't create a new instance  
+            <br>
+            <img src="https://static.javatpoint.com/core/images/java-string.png" alt="" srcset="">
+        </p>
+        <p>
+            <strong>&#9830; New Keyword : <br></strong>
+            <pre class="code">
+    String s=new String("Welcome");//creates two objects and one reference variable  
+            </pre>
+            In such case, JVM will create a new string object in normal (non-pool) heap memory, and the literal "Welcome" will be placed in the string constant pool. The variable s will refer to the object in a heap (non-pool).
+        </p>
+        <br>
+        <p>
+            <strong>
+                Java String Example
+                <br>
+                StringExample.java
+            </strong>
+            <pre class="code">
+    public class StringExample{ 
+
+    public static void main(String args[]){
+
+    String s1="java";//creating string by Java string literal    
+    char ch[]={'s','t','r','i','n','g','s'};    
+    String s2=new String(ch);//converting char array to string    
+    String s3=new String("example");//creating Java string by keyword    
+    System.out.println(s1);    
+    System.out.println(s2);    
+    System.out.println(s3);    
+    }
+    }    
+            </pre> 
+            <u>Output:</u> <br>
+            java <br>
+            strings <br>
+            example <br>
+        </p>
+        <br>
+    </div>
+    <!-- topic 2 -->
+    <div class="content">
+        <h3>Topic 2:- <span class="headspan">Imutable String</span></h3>
+        <br>
+        <p>
+            A String is an unavoidable type of variable while writing any application program. String references are used to store various attributes like username, password, etc. In Java, String objects are immutable. Immutable simply means unmodifiable or unchangeable.
+            <br0>
+            Once String object is created its data or state can't be changed but a new String object is created.
+        </p>
+            <br> <br>
+        <strong>&#9830; Why String objects are immutable in Java? <br></strong>
+        <p>
+            As Java uses the concept of String literal. Suppose there are 5 reference variables, all refer to one object "Sachin". If one reference variable changes the value of the object, it will be affected by all the reference variables. That is why String objects are immutable in Java.
+            <br> <br>
+            Following are some features of String which makes String objects immutable.
+        </p>
+        <p>
+            <ul class="pt">
+                <li>
+                    ClassLoader: <br>
+                    A ClassLoader in Java uses a String object as an argument. Consider, if the String object is modifiable, the value might be changed and the class that is supposed to be loaded might be different.
+                    <br>
+                    To avoid this kind of misinterpretation, String is immutable.
+                </li>
+                <li>
+                    Thread Safe <br>
+                    As the String object is immutable we don't have to take care of the synchronization that is required while sharing an object across multiple threads.
+                </li>
+                <li>
+                    Security <br>
+                    As we have seen in class loading, immutable String objects avoid further errors by loading the correct class. This leads to making the application program more secure. Consider an example of banking software. The username and password cannot be modified by any intruder because String objects are immutable. This can make the application program more secure.
+                </li>
+                <li>
+                    Heap Space <br>
+                    The immutability of String helps to minimize the usage in the heap memory. When we try to declare a new String object, the JVM checks whether the value already exists in the String pool or not. If it exists, the same value is assigned to the new object. This feature allows Java to use the heap space efficiently.
+                </li>
+            </ul>
+        </p>
+    </div> <br>
+    <!-- topic 3 -->
+    <div class="content">
+        <h3>Topic 3:- <span class="headspan">Java String compare</span></h3> <br>
+        <p>
+            We can compare String in Java on the basis of content and reference.
+            <br>
+            It is used in authentication (by equals() method), sorting (by compareTo() method), reference matching (by == operator) etc.
+            <br>
+            There are three ways to compare String in Java:
+            <ul class="pt">
+                <li>
+                    By Using equals() Method
+                </li>
+                <li>
+                    By Using == Operator
+                </li>
+                <li>
+                    By compareTo() Method
+                </li>
+            </ul>
+        </p>
+        <p>
+            <strong>&#9830; By Using equals() Method <br></strong>
+            The String class equals() method compares the original content of the string. It compares values of string for equality. String class provides the following two methods:
+            <ul class="pt">
+                <li>
+                    public boolean equals(Object another) compares this string to the specified object.
+                </li>
+                <li>
+                    public boolean equalsIgnoreCase(String another) compares this string to another string, ignoring case.
+                </li>
+            </ul>
+            <pre class="code">
+    class Teststringcomparison1{  
+        public static void main(String args[]){  
+            String s1="Sachin";  
+            String s2="Sachin";  
+            String s3=new String("Sachin");  
+            String s4="Saurav";  
+            System.out.println(s1.equals(s2));//true  
+            System.out.println(s1.equals(s3));//true  
+            System.out.println(s1.equals(s4));//false  
+        }  
+    }  
+            </pre>
+            <u>Output</u><br>
+            true <br>
+            true <br>
+            false <br>
+            <br>
+            <pre class="code">
+    class Teststringcomparison2{  
+        public static void main(String args[]){  
+        String s1="Sachin";  
+        String s2="SACHIN";  
+                     
+        System.out.println(s1.equals(s2));//false  
+        System.out.println(s1.equalsIgnoreCase(s2));//true  
+        }  
+    }  
+            </pre>
+            <u>Output</u> <br>
+            flase <br>
+            true <br>
+            <br>
+        </p>
+        <p>
+            <strong>&#9830; By Using equals() Method <br></strong>
+            The == operator compares references not values. <br>
+            <pre class="code">
+    class Teststringcomparison3{  
+        public static void main(String args[]){  
+            String s1="Sachin";  
+            String s2="Sachin";  
+            String s3=new String("Sachin");  
+            System.out.println(s1==s2);//true (because both refer to same instance)  
+            System.out.println(s1==s3);//false(because s3 refers to instance created in nonpool)  
+        }  
+    }                  
+            </pre>
+            <u>Output</u> <br>
+            true <br>
+            flase <br>
+            <br>
+        </p>
+        <p>
+            <strong>&#9830; By Using compareTo() method <br></strong>
+            The String class compareTo() method compares values lexicographically and returns an integer value that describes if first string is less than, equal to or greater than second string.
+            <br>
+            Suppose s1 and s2 are two String objects. If:
+            <br>
+            <ul class="pt">
+                <li>
+                    s1 == s2 : The method returns 0.
+                </li>
+                <li>
+                    s1 > s2 : The method returns a positive value.
+                </li>
+                <li>
+                    s1 < s2 : The method returns a negative value.
+                </li>
+            </ul>
+            <pre class="code">
+    class Teststringcomparison4{  
+        public static void main(String args[]){  
+            String s1="Sachin";  
+            String s2="Sachin";  
+            String s3="Ratan";  
+            System.out.println(s1.compareTo(s2));//0  
+            System.out.println(s1.compareTo(s3));//1(because s1>s3)  
+            System.out.println(s3.compareTo(s1));//-1(because s3 < s1 )  
+        }  
+    }  
+            </pre>
+            <u>Output</u> <br>
+            0 <br>
+            1 <br>
+            -1 <br>
+            <br>
+        </p>
+        <p>
+        
+        </p>
+    </div>
+    <!-- topic 4 -->
+    <div class="content">
+        <h3>Topic 4:- <span class="headspan">String Function in Java</span></h3> <br>
+        <table  class="tbl">
+            <tbody>
+                <tr>
+                    <th>No.</th>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="java-string-charat">char charAt(int index)</a>
+                    </td>
+                    <td>It returns char value for the particular index</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="java-string-length">int length()</a></td>
+                    <td>It returns string length</td>
+                </tr>
+            <tr><td>3</td><td><a href="java-string-format">static String format(String format, Object... args)</a></td><td>It returns a formatted string.</td></tr>
+            <tr><td>4</td><td><a href="java-string-format">static String format(Locale l, String format, Object... args)</a></td><td>It returns formatted string with given locale.</td></tr>
+            <tr><td>5</td><td><a href="java-string-substring">String substring(int beginIndex)</a></td><td>It returns substring for given begin index.</td></tr>
+            <tr><td>6</td><td><a href="java-string-substring">String substring(int beginIndex, int endIndex)</a></td><td>It returns substring for given begin index and end index.</td></tr>
+            <tr><td>7</td><td><a href="java-string-contains">boolean contains(CharSequence s)</a></td><td>It returns true or false after matching the sequence of char value.</td></tr>
+            <tr><td>8</td><td><a href="java-string-join">static String join(CharSequence delimiter, CharSequence... elements)</a></td><td>It returns a joined string.</td></tr>
+            <tr><td>9</td><td><a href="java-string-join">static String join(CharSequence delimiter, Iterable&lt;? extends CharSequence&gt; elements)</a></td><td>It returns a joined string.</td></tr>
+            <tr><td>10</td><td><a href="java-string-equals">boolean equals(Object another)</a></td><td>It checks the equality of string with the given object.</td></tr>
+            <tr><td>11</td><td><a href="java-string-isempty">boolean isEmpty()</a></td><td>It checks if string is empty.</td></tr>
+            <tr><td>12</td><td><a href="java-string-concat">String concat(String str)</a></td><td>It concatenates the specified string.</td></tr>
+            <tr><td>13</td><td><a href="java-string-replace">String replace(char old, char new)</a></td><td>It replaces all occurrences of the specified char value.</td></tr>
+            <tr><td>14</td><td><a href="java-string-replace">String replace(CharSequence old, CharSequence new)</a></td><td>It replaces all occurrences of the specified CharSequence.</td>
+            </tr>
+            <tr><td>15</td><td><a href="java-string-equalsignorecase">static String equalsIgnoreCase(String another)</a></td><td>It compares another string. It doesn't check case.</td></tr>
+            <tr><td>16</td><td><a href="java-string-split">String[] split(String regex)</a></td><td>It returns a split string matching regex.</td>
+            </tr><tr><td>17</td><td><a href="java-string-split">String[] split(String regex, int limit)</a></td><td>It returns a split string matching regex and limit.</td>
+            </tr><tr><td>18</td><td><a href="java-string-intern">String intern()</a></td><td>It returns an interned string.</td>
+            </tr><tr><td>19</td><td><a href="java-string-indexof">int indexOf(int ch)</a></td><td>It returns the specified char value index.</td></tr>
+            <tr><td>20</td><td><a href="java-string-indexof">int indexOf(int ch, int fromIndex)</a></td><td>It returns the specified char value index starting with given index.</td></tr>
+            <tr><td>21</td><td><a href="java-string-indexof">int indexOf(String substring)</a></td><td>It returns the specified substring index.</td></tr>
+            <tr><td>22</td><td><a href="java-string-indexof">int indexOf(String substring, int fromIndex)</a></td><td>It returns the specified substring index starting with given index.</td></tr>
+            <tr><td>23</td><td><a href="java-string-tolowercase">String toLowerCase()</a></td><td>It returns a string in lowercase.</td></tr>
+            <tr><td>24</td><td><a href="java-string-tolowercase">String toLowerCase(Locale l)</a></td><td>It returns a string in lowercase using specified locale.</td></tr>
+            <tr><td>25</td><td><a href="java-string-touppercase">String toUpperCase()</a></td><td>It returns a string in uppercase.</td></tr>
+            <tr><td>26</td><td><a href="java-string-touppercase">String toUpperCase(Locale l)</a></td><td>It returns a string in uppercase using specified locale.</td></tr>
+            <tr><td>27</td><td><a href="java-string-trim">String trim()</a></td><td>It removes beginning and ending spaces of this string.</td></tr>
+            <tr><td>28</td><td><a href="java-string-valueof">static String valueOf(int value)</a></td><td>It converts given type into string. It is an overloaded method.</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="noteboard">
+        <h3><span class="headspan">More Information</span></h3>
+        <br>
+        <p>
+            <a href="oppunit1.pdf" target="_blank">For Complete Notes click on this Link</a> <br> <br>
+            <a href="https://www.javatpoint.com/java-string" target="_blank">Reference Website Link</a> <br> <br>
+            <a href="opps.pdf" target="_blank">Solved Question bank</a>
+        </p>
+    </div>
+</body>
+<script>
+    var menu = document.getElementById('btn');
+    var rnav = document.getElementById('navbr');
+    menu.addEventListener("click", () => {
+        rnav.classList.toggle("active");
+    })
+</script>
+
+</html>

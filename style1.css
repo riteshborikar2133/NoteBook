@@ -58,7 +58,7 @@
     transition: 0.2s linear;
     color: #EEEEEE;
 }
-.unsec :hover{
+.unsec a:hover{
     background: transparent;
     background-size: cover;
     background-color: #EEEEEE;
