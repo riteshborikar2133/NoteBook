@@ -99,6 +99,7 @@ p img {
     text-align: center;
     margin: auto;
     border: 1px solid black;
+    font-size: 2rem;
 }
 .tbl th{
     border: 1px solid black;
